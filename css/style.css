@@ -683,9 +683,10 @@ form .input-group:first-child {
 		font-size: 30px;
 		font-style: normal;
 		font-weight: 800;
-		line-height: 35px; /* 128.536% */
+		line-height: 35px;
 		letter-spacing: -0.4px;
-		margin-bottom: 13px;
+		max-width: 90%;
+		margin: 0 auto 13px;
 	}
 	.box4-desc {
 		color: #000;
@@ -695,7 +696,8 @@ form .input-group:first-child {
 		font-style: normal;
 		font-weight: 600;
 		line-height: 20px; /* 120% */
-		margin-bottom: 20px;
+		max-width: 90%;
+		margin: 0 auto 20px;
 	}
 	.slide {
 		width: 239px;
@@ -830,7 +832,7 @@ form .input-group:first-child {
 	.box5 {
 		max-width: 1220px;
 		margin: 110px auto 0px;
-		border-radius: 30px;
+		border-radius: 0px;
 		background: #f4f4f4;
 		padding: 42px 84px 40px 84px;
 	}
@@ -1092,9 +1094,7 @@ form .input-group:first-child {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-	.container {
-		padding: 20px 15px;
-	}
+	
 
 	.main-title {
 		font-size: 1.8rem;
@@ -1119,12 +1119,13 @@ form .input-group:first-child {
 	}
 
 	.woman-image {
-		width: 112px;
-		height: 112px;
+		width: 100%;
+		max-width: 92px;
+		height: 90px;
 	}
 
 	.woman-placeholder {
-		width: 112px;
+		width: 100%;
 		height: 112px;
 	}
 
@@ -1147,7 +1148,7 @@ form .input-group:first-child {
 		font-size: 0.9rem;
 	}
 	.box7 {
-		padding-top: 35px;
+		padding: 35px 28px 0px;
 	}
 }
 
@@ -1178,13 +1179,13 @@ form .input-group:first-child {
 		gap: 10px;
 	}
 	.main-title {
-		font-size: 21.02px;
+		font-size: 22px;
 		line-height: 27.24px;
 		text-align: left;
 		margin-bottom: 5px;
 	}
 	.subtitle {
-		font-size: 10.97px;
+		font-size: 14px;
 		text-align: left;
 		padding: 0;
 	}
@@ -1566,6 +1567,10 @@ tbody tr {
 	}
 }
 @media (max-width: 600px) {
+	.box9 {
+		margin-top: 35px;
+		border-radius: 0;
+	}
 	.box9 h2 {
 		font-size: 25px;
 		line-height: 35px;
