@@ -26,9 +26,7 @@ a {
 	max-width: 1440px;
 	margin: 0 auto;
 }
-.wrapper {
-	padding: 50px 0px;
-}
+
 .box1 {
 	background: url("../images/box1/bg-box1.png") no-repeat center center;
 	background-size: cover;
@@ -390,6 +388,8 @@ form .input-group:first-child {
 	.box2-left {
 		text-align: center;
 		width: 100%;
+		margin-bottom: -10px;
+		transform: translateX(20px);
 	}
 }
 @media (max-width: 600px) {
@@ -1279,7 +1279,7 @@ td:first-child {
 
 tbody tr {
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* tạo hiệu ứng nổi nhẹ */
-	border-radius: 6px;
+	border-radius: 20px;
 }
 
 @media (max-width: 600px) {
