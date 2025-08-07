@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.box1 {
+	background: url("../images/box1/bg-box1.png") no-repeat center center;
+	background-size: cover;
+	padding: 60px 110px 120px;
+	display: flex;
+	gap: 36px;
+}
+.box1-left {
+	width: 55%;
+}
+.box1-right {
+	width: calc(45% - 36px);
+	margin-top: 60px;
+}
+.box1-left .logo {
+	color: #fed881;
+	font-family: Inter;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 19.8px;
+	letter-spacing: 0.54px;
+	text-transform: uppercase;
+	margin-bottom: 28px;
+}
+.box1-left .heading {
+	color: #ffffff;
+
+	font-family: Inter;
+	font-size: 46.289px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 60px;
+	letter-spacing: -1.4px;
+	margin-bottom: 32px;
+}
+.box1-left .heading span {
+	color: #00a2c7;
+}
+.box1-left .desc {
+	color: #fff;
+	font-family: Inter;
+	font-size: 21.75px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 36px;
+	max-width: 455px;
+}
+.box1-right {
+	background: url("../images/box1/bg-form.png") no-repeat center center;
+	background-size: cover;
+	padding: 21px 33px 34px;
+	text-align: center;
+	border-radius: 30px;
+}
+.box-form h2 {
+	color: #fff;
+	text-align: center;
+	font-family: Inter;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: normal;
+	margin-bottom: 19px;
+}
+form {
+	text-align: left;
+}
+.input-group label {
+	display: block;
+	color: #fff;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: left;
+	margin-bottom: 9px;
+}
+.input-group select {
+	width: 100%;
+	padding: 6px 14px;
+	border-radius: 100px;
+	background: rgba(0, 0, 0, 0.1);
+	color: #fff;
+	font-family: Inter;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 200;
+	line-height: normal;
+	height: 38px;
+	border: none;
+	outline: none;
+}
+.input-group select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.input-group select {
+	background-image: url("../images/box1/arrow.svg");
+	background-repeat: no-repeat;
+	background-position: right 25px center;
+	padding-right: 20px;
+}
+.input-group option {
+	padding: 10px 15px;
+	background-color: #fff;
+	color: #333;
+	cursor: pointer;
+}
+form .input-group:first-child {
+	margin-bottom: 30px;
+}
+.btn {
+	border-radius: 14px;
+	background: #00b67a;
+	color: #fff;
+	font-family: Inter;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	padding: 14px 55px;
+	border: none;
+	outline: none;
+	margin: 0 auto;
+	filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 auto;
+}
+.btn:hover {
+	background: #00a26b;
+	transition: all 0.2s linear;
+}
+
+.checkbox {
+	margin-top: 19px;
+	margin-bottom: 26px;
+}
+.checkbox-style {
+	display: inline-flex;
+	cursor: pointer;
+}
+.checkbox-label {
+	cursor: pointer;
+	color: #fff;
+	font-family: Inter;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 200;
+	line-height: normal;
+	margin-top: -3px;
+}
+.checkbox-style input {
+	display: none;
+}
+.checkbox-box {
+	width: 100%;
+	height: 15px;
+	max-width: 15px;
+	margin-right: 9px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	color: transparent;
+	transition: all 0.2s linear;
+	position: relative;
+}
+.checkbox-box svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.checkbox-input:checked + .checkbox-box {
+	background-color: #00b67a;
+	border-color: #00b67a;
+	color: white;
+}
+
+@media (max-width: 1024px) {
+	.box1 {
+		background: url(../images/box1/bg-box1.png) no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		padding: 60px 50px 120px;
+		display: flex;
+		gap: 36px;
+	}
+	.box1-left .heading {
+		font-size: 36px;
+		line-height: 50px;
+		letter-spacing: -1.4px;
+		margin-bottom: 30px;
+	}
+	.box1-left {
+		width: 45%;
+	}
+	.box1-right {
+		width: 55%;
+		margin-top: 60px;
+	}
+}
+@media (max-width: 768px) {
+	.box1 {
+		flex-direction: column;
+	}
+	.box1-left {
+		width: 100%;
+	}
+	.box1-right {
+		width: 100%;
+		margin-top: 0px;
+	}
+}
+@media (max-width: 600px) {
+	.box1 {
+		background: url(../images/box1/bg-box1.png) no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		padding: 25px 28px 60px;
+		display: flex;
+		gap: 36px;
+	}
+	.wrapper {
+		padding: 0px 0px;
+	}
+	.box1 {
+		flex-direction: column;
+	}
+	.box1-left {
+		width: 100%;
+	}
+	.box1-right {
+		width: 100%;
+		margin-top: 0px;
+	}
+	.box1-left .logo {
+		font-size: 12px;
+		line-height: 19.8px;
+		margin-bottom: 8px;
+	}
+	.box1-left .heading {
+		font-size: 22px;
+		line-height: 29.827px;
+		letter-spacing: -0.696px;
+		margin-bottom: 10px;
+	}
+	.box1-left .desc {
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.box-form h2 {
+		font-size: 18px;
+		margin-bottom: 12px;
+	}
+	.input-group label {
+		font-size: 14px;
+		margin-bottom: 9px;
+	}
+	.box1-right {
+		background: url(../images/box1/bg-form.png) no-repeat center center;
+		background-size: cover;
+		padding: 21px 20px 34px;
+		text-align: center;
+		border-radius: 30px;
+	}
+	form .input-group:first-child {
+		margin-bottom: 24px;
+	}
+}
+
+.onTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+.onTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ============================================== */
+
+.content {
+    font-family: Inter;
+	padding-bottom: 50px;
+}
+.content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #002088;
+    margin-bottom: 20px;
+}
+.content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d2d64;
+    margin: 20px 0px;
+}
+.content h2 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d2d64;
+    margin: 20px 0px;
+}
+.content ul {
+	padding-left: 20px;
+	margin: 20px 0px;
+}
+.content ul li {
+	margin-bottom: 5px;
+}

@@ -11,6 +11,15 @@
 </head>
 
 <body>
+
+    <div class="onTop" id="scrollTopBtn">
+        <a href="#">
+            <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25.2904" cy="25.2904" r="25.2904" fill="#D9D9D9"/>
+                <path d="M34.9281 24.0763C35.5228 24.7105 36.487 24.7105 37.0817 24.0763C37.6764 23.4422 37.6764 22.414 37.0817 21.7798L28.2599 12.3727C27.0705 11.1044 25.1421 11.1044 23.9526 12.3727L15.1309 21.7798C14.5361 22.414 14.5361 23.4422 15.1309 24.0763C15.7256 24.7105 16.6898 24.7105 17.2845 24.0763L24.5834 16.2932L24.5834 39.1671C24.5834 40.0639 25.2652 40.791 26.1063 40.791C26.9473 40.791 27.6292 40.0639 27.6292 39.1671L27.6292 16.2932L34.9281 24.0763Z" fill="#3C3C3C"/>
+            </svg>
+        </a>
+    </div>
     <div class="wrapper">
         <div class="container">
             <div class="box1" id="loans">
@@ -29,7 +38,7 @@
                 <div class="box1-right">
                     <div class="box-form">
                         <h2>Get Your Personal Loan <br> Up to $5,000</h2>
-                        <form>
+                        <form id="loan-form">
                             <div class="input-group">
                                 <label for="name">Loan Amount</label>
                                 <select name="loan-amount" id="loan-amount">
@@ -81,14 +90,16 @@
                                                 clip-rule="evenodd" />
                                         </svg>
                                     </div>
-                                    <label for="checkbox" class="checkbox-label">By clicking 'Take it now', you agree to
-                                        our Privacy Policy, Terms,
-                                        Rates & Fees; receive special offers from us and our marketing partners
+                                    <label for="checkbox" class="checkbox-label">By clicking '<b>Take it now</b>', you agree to
+                                        our <b>Privacy Policy</b>, <b>Terms</b>,
+                                        <b>Rates & Fees</b>; receive special offers from us and our marketing partners
                                         via phone, email.</label>
                             </div>
 
                             </label>
-                            <button type="submit" class="btn">Take It Now!</button>
+                            <div style="text-align: center;">
+                                <button type="submit" class="btn" id="submit-button">Take It Now!</button>
+                            </div>
                         </form>
 
                     </div>
@@ -197,62 +208,47 @@
                 </div>
             </div>
 
-            <!-- <div class="box4">
+            <div class="box4">
                 <h2>Get the eLoanWarehouse you need, fully online</h2>
                 <div class="box4-desc">
                     Explore flexible online loan options designed for your timing and your goals.
                 </div>
-
-                <div id="wrapper">
-                    <input type="radio" name="slider" id="slide1" checked>
-                    <input type="radio" name="slider" id="slide2">
-                    <input type="radio" name="slider" id="slide3">
-                    <div class="slider">
-                        <div class="slides">
-                            <div class="slide">
-                                <div class="image-box">
-                                    <img src="./images/box4/1.png"
-                                        alt="Mountain">
-                                </div>
-                                <div class="image-box">
-                                    <img src="./images/box4/2.png"
-                                        alt="Forest">
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="image-box">
-                                    <img src="./images/box4/3.png"
-                                        alt="Ocean">
-                                </div>
-                                <div class="image-box">
-                                    <img src="./images/box4/4.png"
-                                        alt="Desert">
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="image-box">
-                                    <img src="./images/box4/4.png"
-                                        alt="Ocean">
-                                </div>
-                                <div class="image-box">
-                                    <img src="./images/box4/5.png"
-                                        alt="Desert">
-                                </div>
-                            </div>    
+                <div class="slides-wrapper">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="./images/box4/1.png" alt="Mountain">
                         </div>
-
-                        <label for="slide3" class="nav-arrow nav-prev">&#10094;</label> 
-                        <label for="slide2" class="nav-arrow nav-next">&#10095;</label>
-
-                        <div hidden>
-                            <label for="slide1" id="goto1"></label>
-                            <label for="slide2" id="goto2"></label>
-                            <label for="slide3" id="goto3"></label>
+                        <div class="slide">
+                            <img src="./images/box4/2.png" alt="Forest">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/box4/3.png" alt="Ocean">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/box4/4.png" alt="Desert">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/box4/5.png" alt="Desert">
+                        </div>
+                        <!-- Duplicate slides for seamless loop -->
+                        <div class="slide">
+                            <img src="./images/box4/1.png" alt="Mountain">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/box4/2.png" alt="Forest">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/box4/3.png" alt="Ocean">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/box4/4.png" alt="Desert">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/box4/5.png" alt="Desert">
                         </div>
                     </div>
                 </div>
-
-            </div> -->
+            </div>
 
             <div class="box5">
                 <div class="box-title">
@@ -329,6 +325,101 @@
                 </div>
             </div>
 
+            <div class="box7">
+                <div class="image-section mb">
+                    <div class="woman-image">
+                        <div class="woman-placeholder"></div>
+                    </div>
+
+                    <div>
+                        <h1 class="main-title">
+                            <span class="blue-text">Loan Repayment Terms</span>
+                            <span class="black-text">from eLoanWarehouse</span>
+                        </h1>
+                        <p class="subtitle">
+                            eLoanWarehouse offers flexible plans to match your situation:
+                        </p>
+                    </div>
+                </div>
+
+                <h1 class="main-title desk">
+                    <span class="blue-text">Loan Repayment Terms</span>
+                    <span class="black-text">from eLoanWarehouse</span>
+                </h1>
+
+                <p class="subtitle desk">
+                    eLoanWarehouse offers flexible plans to match your situation:
+                </p>
+
+                <div class="content-wrapper">
+                    <div class="image-section desk">
+                        <div class="woman-image">
+                            <div class="woman-placeholder"></div>
+                        </div>
+                    </div>
+
+                    <div class="features-section">
+                        <div class="feature-card">
+                            <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18.5" cy="18.5" r="18.5" fill="#E9F7FF" />
+                                <path
+                                    d="M18.9994 8C19.3175 8.00007 19.623 8.12658 19.848 8.35156C20.0729 8.57658 20.1995 8.88204 20.1995 9.2002V10.4004C20.1995 10.4207 20.1967 10.4408 20.1956 10.4609C22.2838 10.7254 24.1445 11.8391 24.9486 13.5439C25.0158 13.6866 25.0543 13.8415 25.0619 13.999C25.0693 14.1564 25.0458 14.3137 24.9925 14.4619C24.9392 14.6102 24.8573 14.7466 24.7513 14.8633C24.6453 14.9799 24.5169 15.0744 24.3744 15.1416C24.2319 15.2088 24.0776 15.2473 23.9203 15.2549C23.7628 15.2624 23.6048 15.2389 23.4564 15.1855C23.3081 15.1322 23.1716 15.0503 23.055 14.9443C22.9384 14.8383 22.8439 14.71 22.7767 14.5674C22.3566 13.6711 21.0462 12.7999 19.2308 12.7998C18.1088 12.7998 17.1373 13.1428 16.4749 13.6396C15.8138 14.1352 15.515 14.7298 15.515 15.2842C15.515 15.8385 15.8139 16.4339 16.4749 16.9307C17.1373 17.4275 18.1078 17.7705 19.2298 17.7705C19.3128 17.7705 19.3949 17.7792 19.4749 17.7959C20.8214 17.907 22.0632 18.365 23.0277 19.0889C24.1436 19.9264 24.9466 21.1747 24.9466 22.6543C24.9466 24.1338 24.1438 25.3833 23.0267 26.2197C22.238 26.8116 21.2642 27.2247 20.1995 27.417V28.4004C20.1995 28.7185 20.073 29.0241 19.848 29.249C19.623 29.474 19.3175 29.5996 18.9994 29.5996C18.6812 29.5996 18.3757 29.4739 18.1507 29.249C17.9258 29.0241 17.7992 28.7185 17.7992 28.4004V27.4668C15.7387 27.1869 13.9089 26.0817 13.1146 24.3945C12.9788 24.1067 12.9631 23.7761 13.0706 23.4766C13.1783 23.1773 13.4001 22.9325 13.6878 22.7969C13.9755 22.6612 14.3054 22.6456 14.6048 22.7529C14.9044 22.8605 15.1497 23.0832 15.2855 23.3711C15.7081 24.2685 17.0181 25.1396 18.8333 25.1396C19.9552 25.1396 20.9248 24.7965 21.5872 24.2998C22.2484 23.8042 22.5462 23.2097 22.5462 22.6553C22.5461 22.101 22.2485 21.5043 21.5863 21.0088C20.9251 20.5121 19.954 20.1689 18.8333 20.1689C18.7513 20.1689 18.6703 20.1599 18.5911 20.1436C17.2435 20.0329 16.0008 19.575 15.0355 18.8506C13.9195 18.013 13.1156 16.7648 13.1156 15.2852C13.1156 13.8056 13.9195 12.5563 15.0355 11.7188C15.8102 11.1382 16.7641 10.7277 17.807 10.5312C17.8022 10.488 17.7992 10.4443 17.7992 10.4004V9.2002C17.7992 8.88194 17.9257 8.57661 18.1507 8.35156C18.3758 8.12654 18.6811 8 18.9994 8Z"
+                                    fill="#0376FF" />
+                            </svg>
+                            <div class="feature-content">
+                                <h3>Loan Amounts:</h3>
+                                <p>You can borrow anywhere from $100 - $5,000.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18.5" cy="18.5" r="18.5" fill="#E9F7FF" />
+                                <path
+                                    d="M26.8192 15.05C25.8192 12.65 23.9192 10.75 21.5192 9.75C19.1192 8.75 16.4192 8.75 14.0192 9.75C9.01923 11.85 6.71923 17.55 8.71923 22.45C9.81923 24.85 11.7192 26.75 14.1192 27.75C15.3192 28.25 16.6192 28.45 17.8192 28.45C19.1192 28.45 20.3192 28.25 21.5192 27.75C26.5192 25.65 28.9192 19.95 26.8192 15.05ZM25.4192 21.95C24.6192 23.95 23.0192 25.55 20.9192 26.45C18.9192 27.25 16.6192 27.25 14.6192 26.45C12.6192 25.65 11.0192 24.05 10.1192 21.95C8.41923 17.75 10.4192 12.85 14.6192 11.15C15.6192 10.75 16.7192 10.55 17.8192 10.55C18.9192 10.55 19.9192 10.75 21.0192 11.15C23.0192 11.95 24.6192 13.55 25.5192 15.65C26.3192 17.65 26.3192 19.85 25.4192 21.95Z"
+                                    fill="#0376FF" />
+                                <path
+                                    d="M21.6192 20.95L18.3192 18.95V14.75C18.3192 14.35 18.0192 13.95 17.5192 13.95C17.0192 13.95 16.8192 14.35 16.8192 14.75V19.45C16.8192 19.75 16.9192 19.95 17.2192 20.05L20.9192 22.25C21.0192 22.35 21.2192 22.35 21.3192 22.35C21.6192 22.35 21.8192 22.25 21.9192 21.95C22.0192 21.65 21.9192 21.15 21.6192 20.95Z"
+                                    fill="#0376FF" />
+                            </svg>
+                            <div class="feature-content">
+                                <h3>How Long to Repay:</h3>
+                                <p>You will get a loan with a term of up to 12 months.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18.5" cy="18.5" r="18.5" fill="#E9F7FF" />
+                                <path
+                                    d="M15 9.75C15 9.33579 15.3358 9 15.75 9H20.922C21.6512 9 22.3509 9.29018 22.8664 9.80567L25.6944 12.6337C26.2099 13.1492 26.5 13.8489 26.5 14.578V22.75C26.5 23.1642 26.1642 23.5 25.75 23.5C25.3358 23.5 25 23.1642 25 22.75V14.578C25 14.2471 24.8682 13.9288 24.6337 13.6943L21.8057 10.8663C21.5712 10.6318 21.2529 10.5 20.922 10.5H15.75C15.3358 10.5 15 10.1642 15 9.75ZM11.75 14C12.1642 14 12.5 14.3358 12.5 14.75V25.75C12.5 26.4408 13.0592 27 13.75 27H21.75C22.1642 27 22.5 27.3358 22.5 27.75C22.5 28.1642 22.1642 28.5 21.75 28.5H13.75C12.2308 28.5 11 27.2692 11 25.75V14.75C11 14.3358 11.3358 14 11.75 14ZM12.3357 9.53151C12.0769 9.20806 11.6049 9.15562 11.2815 9.41438C10.9581 9.67313 10.9056 10.1451 11.1644 10.4685L25.1644 27.9685C25.4231 28.292 25.8951 28.3444 26.2185 28.0857C26.542 27.8269 26.5944 27.355 26.3357 27.0315L12.3357 9.53151Z"
+                                    fill="#0376FF" />
+                            </svg>
+                            <div class="feature-content">
+                                <h3>No Extra Fees for Paying Early:</h3>
+                                <p>You can pay off your loan early without any penalties.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18.5" cy="18.5" r="18.5" fill="#E9F7FF" />
+                                <path
+                                    d="M15.25 9C15.25 8.58579 15.5858 8.25 16 8.25H20C20.4142 8.25 20.75 8.58579 20.75 9C20.75 9.41421 20.4142 9.75 20 9.75H16C15.5858 9.75 15.25 9.41421 15.25 9ZM23.1267 14.8733C25.9578 17.7044 25.9578 22.2956 23.1267 25.1267C20.2956 27.9578 15.7044 27.9578 12.8733 25.1267C10.0422 22.2956 10.0422 17.7044 12.8733 14.8733C15.7044 12.0422 20.2956 12.0422 23.1267 14.8733ZM24.6953 14.3654L26 13.0607L26.4697 13.5303C26.7626 13.8232 27.2374 13.8232 27.5303 13.5303C27.8232 13.2374 27.8232 12.7626 27.5303 12.4697L26.5306 11.4699L25.5303 10.4697C25.2375 10.1768 24.7626 10.1768 24.4697 10.4697C24.1768 10.7626 24.1768 11.2374 24.4697 11.5303L24.9394 12L23.6346 13.3048C20.1969 10.4051 15.0509 10.5744 11.8127 13.8127C8.39578 17.2296 8.39578 22.7704 11.8127 26.1873C15.2296 29.6042 20.7704 29.6042 24.1873 26.1873C27.4256 22.9491 27.5949 17.8032 24.6953 14.3654ZM18.75 18.9989C19.0535 19.2264 19.25 19.589 19.25 19.998V20.0007C19.2475 20.6864 18.6926 21.25 17.999 21.25C17.3088 21.25 16.75 20.6912 16.75 20.001C16.75 19.5916 16.9466 19.2289 17.25 19.0008V16C17.25 15.5858 17.5858 15.25 18 15.25C18.4142 15.25 18.75 15.5858 18.75 16V18.9989Z"
+                                    fill="#0376FF" />
+                            </svg>
+                            <div class="feature-content">
+                                <h3>Fast Funding:</h3>
+                                <p>Once approved, you can receive your money in about 24 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="box8">
                 <div class="box-start">
@@ -381,8 +472,387 @@
                 </div>
             </div>
 
+            <div class="box9">
+                <h2>
+                    <span>Trusted by Millions: We’ve helped over 2M+ people get the loans they need</span> —
+                    with 7K+ successful connections every week:
+                </h2>
+                <p class="box9-text1">
+                    What Our Customers Are Saying
+                </p>
+                <div class="reviews-wrapper">
+                    <div class="box9-reviews">
+                        <!-- Original set -->
+                        <div class="review">
+                            <div class="star">
+                                <svg width="105" height="21" viewBox="0 0 105 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M31.5 0L33.8574 7.25532H41.4861L35.3143 11.7394L37.6717 18.9947L31.5 14.5106L25.3283 18.9947L27.6857 11.7394L21.5139 7.25532H29.1426L31.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M52.5 0L54.8574 7.25532H62.4861L56.3143 11.7394L58.6717 18.9947L52.5 14.5106L46.3283 18.9947L48.6857 11.7394L42.5139 7.25532H50.1426L52.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M73.5 0L75.8574 7.25532H83.4861L77.3143 11.7394L79.6717 18.9947L73.5 14.5106L67.3283 18.9947L69.6857 11.7394L63.5139 7.25532H71.1426L73.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M94.5 0L96.8574 7.25532H104.486L98.3143 11.7394L100.672 18.9947L94.5 14.5106L88.3283 18.9947L90.6857 11.7394L84.5139 7.25532H92.1426L94.5 0Z"
+                                        fill="#111088" />
+                                </svg>
+                            </div>
+                            <h3>Quick and stress-free.</h3>
+                            <p>The funding came faster than expected, and the monthly payments fit my budget perfectly.
+                            </p>
+                            <span><b>— Tanya W. S.</b>, 1 day ago</span>
+                        </div>
+
+                        <div class="review">
+                            <div class="star">
+                                <svg width="105" height="21" viewBox="0 0 105 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M31.5 0L33.8574 7.25532H41.4861L35.3143 11.7394L37.6717 18.9947L31.5 14.5106L25.3283 18.9947L27.6857 11.7394L21.5139 7.25532H29.1426L31.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M52.5 0L54.8574 7.25532H62.4861L56.3143 11.7394L58.6717 18.9947L52.5 14.5106L46.3283 18.9947L48.6857 11.7394L42.5139 7.25532H50.1426L52.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M73.5 0L75.8574 7.25532H83.4861L77.3143 11.7394L79.6717 18.9947L73.5 14.5106L67.3283 18.9947L69.6857 11.7394L63.5139 7.25532H71.1426L73.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M94.5 0L96.8574 7.25532H104.486L98.3143 11.7394L100.672 18.9947L94.5 14.5106L88.3283 18.9947L90.6857 11.7394L84.5139 7.25532H92.1426L94.5 0Z"
+                                        fill="#111088" />
+                                </svg>
+                            </div>
+                            <h3>Top-notch service from Payday eLoanWarehouse.</h3>
+                            <p>Everything went smoothly — from checking my rate to receiving the funds.</p>
+                            <span><b>— Fabrice K. M.</b>, 1 day ago</span>
+                        </div>
+
+                        <div class="review">
+                            <div class="star">
+                                <svg width="105" height="21" viewBox="0 0 105 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M31.5 0L33.8574 7.25532H41.4861L35.3143 11.7394L37.6717 18.9947L31.5 14.5106L25.3283 18.9947L27.6857 11.7394L21.5139 7.25532H29.1426L31.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M52.5 0L54.8574 7.25532H62.4861L56.3143 11.7394L58.6717 18.9947L52.5 14.5106L46.3283 18.9947L48.6857 11.7394L42.5139 7.25532H50.1426L52.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M73.5 0L75.8574 7.25532H83.4861L77.3143 11.7394L79.6717 18.9947L73.5 14.5106L67.3283 18.9947L69.6857 11.7394L63.5139 7.25532H71.1426L73.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M94.5 0L96.8574 7.25532H104.486L98.3143 11.7394L100.672 18.9947L94.5 14.5106L88.3283 18.9947L90.6857 11.7394L84.5139 7.25532H92.1426L94.5 0Z"
+                                        fill="#111088" />
+                                </svg>
+                            </div>
+                            <h3>User-friendly and fast.</h3>
+                            <p>The process was straightforward and efficient. I got a clear answer without any
+                                confusion.</p>
+                            <span><b>— Lisa W.</b>, 2 days ago</span>
+                        </div>
+
+                        <div class="review">
+                            <div class="star">
+                                <svg width="105" height="21" viewBox="0 0 105 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M31.5 0L33.8574 7.25532H41.4861L35.3143 11.7394L37.6717 18.9947L31.5 14.5106L25.3283 18.9947L27.6857 11.7394L21.5139 7.25532H29.1426L31.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M52.5 0L54.8574 7.25532H62.4861L56.3143 11.7394L58.6717 18.9947L52.5 14.5106L46.3283 18.9947L48.6857 11.7394L42.5139 7.25532H50.1426L52.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M73.5 0L75.8574 7.25532H83.4861L77.3143 11.7394L79.6717 18.9947L73.5 14.5106L67.3283 18.9947L69.6857 11.7394L63.5139 7.25532H71.1426L73.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M94.5 0L96.8574 7.25532H104.486L98.3143 11.7394L100.672 18.9947L94.5 14.5106L88.3283 18.9947L90.6857 11.7394L84.5139 7.25532H92.1426L94.5 0Z"
+                                        fill="#111088" />
+                                </svg>
+                            </div>
+                            <h3>Super fast and flexible!</h3>
+                            <p>Loved how easy it was to compare options and finalize the loan all online.</p>
+                            <span><b>— Emma B.</b>, 2 days ago</span>
+                        </div>
+
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="review">
+                            <div class="star">
+                                <svg width="105" height="21" viewBox="0 0 105 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M31.5 0L33.8574 7.25532H41.4861L35.3143 11.7394L37.6717 18.9947L31.5 14.5106L25.3283 18.9947L27.6857 11.7394L21.5139 7.25532H29.1426L31.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M52.5 0L54.8574 7.25532H62.4861L56.3143 11.7394L58.6717 18.9947L52.5 14.5106L46.3283 18.9947L48.6857 11.7394L42.5139 7.25532H50.1426L52.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M73.5 0L75.8574 7.25532H83.4861L77.3143 11.7394L79.6717 18.9947L73.5 14.5106L67.3283 18.9947L69.6857 11.7394L63.5139 7.25532H71.1426L73.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M94.5 0L96.8574 7.25532H104.486L98.3143 11.7394L100.672 18.9947L94.5 14.5106L88.3283 18.9947L90.6857 11.7394L84.5139 7.25532H92.1426L94.5 0Z"
+                                        fill="#111088" />
+                                </svg>
+                            </div>
+                            <h3>Quick and stress-free.</h3>
+                            <p>The funding came faster than expected, and the monthly payments fit my budget perfectly.
+                            </p>
+                            <span><b>— Tanya W. S.</b>, 1 day ago</span>
+                        </div>
+
+                        <div class="review">
+                            <div class="star">
+                                <svg width="105" height="21" viewBox="0 0 105 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M31.5 0L33.8574 7.25532H41.4861L35.3143 11.7394L37.6717 18.9947L31.5 14.5106L25.3283 18.9947L27.6857 11.7394L21.5139 7.25532H29.1426L31.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M52.5 0L54.8574 7.25532H62.4861L56.3143 11.7394L58.6717 18.9947L52.5 14.5106L46.3283 18.9947L48.6857 11.7394L42.5139 7.25532H50.1426L52.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M73.5 0L75.8574 7.25532H83.4861L77.3143 11.7394L79.6717 18.9947L73.5 14.5106L67.3283 18.9947L69.6857 11.7394L63.5139 7.25532H71.1426L73.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M94.5 0L96.8574 7.25532H104.486L98.3143 11.7394L100.672 18.9947L94.5 14.5106L88.3283 18.9947L90.6857 11.7394L84.5139 7.25532H92.1426L94.5 0Z"
+                                        fill="#111088" />
+                                </svg>
+                            </div>
+                            <h3>Top-notch service from Payday eLoanWarehouse.</h3>
+                            <p>Everything went smoothly — from checking my rate to receiving the funds.</p>
+                            <span><b>— Fabrice K. M.</b>, 1 day ago</span>
+                        </div>
+
+                        <div class="review">
+                            <div class="star">
+                                <svg width="105" height="21" viewBox="0 0 105 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M31.5 0L33.8574 7.25532H41.4861L35.3143 11.7394L37.6717 18.9947L31.5 14.5106L25.3283 18.9947L27.6857 11.7394L21.5139 7.25532H29.1426L31.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M52.5 0L54.8574 7.25532H62.4861L56.3143 11.7394L58.6717 18.9947L52.5 14.5106L46.3283 18.9947L48.6857 11.7394L42.5139 7.25532H50.1426L52.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M73.5 0L75.8574 7.25532H83.4861L77.3143 11.7394L79.6717 18.9947L73.5 14.5106L67.3283 18.9947L69.6857 11.7394L63.5139 7.25532H71.1426L73.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M94.5 0L96.8574 7.25532H104.486L98.3143 11.7394L100.672 18.9947L94.5 14.5106L88.3283 18.9947L90.6857 11.7394L84.5139 7.25532H92.1426L94.5 0Z"
+                                        fill="#111088" />
+                                </svg>
+                            </div>
+                            <h3>User-friendly and fast.</h3>
+                            <p>The process was straightforward and efficient. I got a clear answer without any
+                                confusion.</p>
+                            <span><b>— Lisa W.</b>, 2 days ago</span>
+                        </div>
+
+                        <div class="review">
+                            <div class="star">
+                                <svg width="105" height="21" viewBox="0 0 105 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M31.5 0L33.8574 7.25532H41.4861L35.3143 11.7394L37.6717 18.9947L31.5 14.5106L25.3283 18.9947L27.6857 11.7394L21.5139 7.25532H29.1426L31.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M52.5 0L54.8574 7.25532H62.4861L56.3143 11.7394L58.6717 18.9947L52.5 14.5106L46.3283 18.9947L48.6857 11.7394L42.5139 7.25532H50.1426L52.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M73.5 0L75.8574 7.25532H83.4861L77.3143 11.7394L79.6717 18.9947L73.5 14.5106L67.3283 18.9947L69.6857 11.7394L63.5139 7.25532H71.1426L73.5 0Z"
+                                        fill="#111088" />
+                                    <path
+                                        d="M94.5 0L96.8574 7.25532H104.486L98.3143 11.7394L100.672 18.9947L94.5 14.5106L88.3283 18.9947L90.6857 11.7394L84.5139 7.25532H92.1426L94.5 0Z"
+                                        fill="#111088" />
+                                </svg>
+                            </div>
+                            <h3>Super fast and flexible!</h3>
+                            <p>Loved how easy it was to compare options and finalize the loan all online.</p>
+                            <span><b>— Emma B.</b>, 2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box9-text2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
+                        <path
+                            d="M10.5 0L12.8574 7.25532H20.4861L14.3143 11.7394L16.6717 18.9947L10.5 14.5106L4.32825 18.9947L6.68565 11.7394L0.513906 7.25532H8.1426L10.5 0Z"
+                            fill="#111088" />
+                    </svg>
+                    <b>Average Rating: 4.3 out of 5,</b> based on <b>11,132 verified reviews</b>
+                </div>
+
+                <div class="text3">
+                    <h4>Actual savings and results may differ.</h4>
+                    <p>The experiences shared above reflect individual cases and may not apply to all users. Savings are
+                        not guaranteed and depend on your personal circumstances and other variables.</p>
+                </div>
+
+            </div>
+
+            <div class="box10">
+                <div class="faq-section">
+                    <h2>Payday eLoanWarehouse FAQs</h2>
+
+                    <div class="faq-container">
+                        <!-- Cột trái -->
+                        <div class="faq-column">
+                            <details>
+                                <summary>Q: Is eLoanWarehouse a direct lender?</summary>
+                                <p>No, eLoanWarehouse connects borrowers with various lenders but it is not a direct
+                                    lender itself.</p>
+                            </details>
+
+                            <details>
+                                <summary>Q: What is eLoanWarehouse?</summary>
+                                <p>eLoanWarehouse is an online platform that offers payday and installment loans, mainly
+                                    for individuals with poor credit.</p>
+                            </details>
+
+                            <details>
+                                <summary>Q: What is a payday loan?</summary>
+                                <p>The payday loan trap is a cycle of debt where borrowers take new loans to pay off
+                                    existing ones due to high interest rates.</p>
+                            </details>
+
+                            <details>
+                                <summary>Q: How to qualify for a payday loan?</summary>
+                                <p>To qualify, you need to be 18+, have a steady income, an active checking account, and
+                                    meet minimum income requirements.</p>
+                            </details>
+
+                            <details>
+                                <summary>Q: Does eLoanWarehouse offer same-day payday loans?</summary>
+                                <p>Yes, they often provide same-day funding, with money deposited within 24 hours of
+                                    approval.</p>
+                            </details>
+                        </div>
+
+                        <!-- Cột phải -->
+                        <div class="faq-column">
+                            <details>
+                                <summary>Q: What is the credit score required?</summary>
+                                <p>Lenders offer Payday eLoanWarehouse for a wide range of credit scores. Even if your
+                                    score is less than perfect, you may still qualify.</p>
+                            </details>
+
+                            <details>
+                                <summary>Q: What are the reviews for eLoanWarehouse?</summary>
+                                <p>Reviews are mixed; some appreciate quick funds, while others criticize high costs and
+                                    debt risks.</p>
+                            </details>
+
+                            <details>
+                                <summary>Q: Will checking my rate hurt my credit score?</summary>
+                                <p>No. Checking your rate only requires a soft credit inquiry, which does not affect
+                                    your score.</p>
+                            </details>
+
+                            <details>
+                                <summary>Q: What happens if I'm denied a loan — where can I reapply?</summary>
+                                <p>Many lenders allow you to reapply in the future. Look for lenders who work with
+                                    people who have credit challenges.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-top">
+                    <div class="footer-left">
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M2.84319 5.22204C2.74372 5.38044 2.80866 5.58317 2.96769 5.68162L9.60515 9.79052C9.84703 9.94026 10.1528 9.94026 10.3947 9.79052L17.0323 5.68155C17.1913 5.5831 17.2562 5.38036 17.1568 5.22196C16.7587 4.58824 16.0536 4.16699 15.25 4.16699H4.75C3.9464 4.16699 3.24119 4.58828 2.84319 5.22204Z"
+                                    fill="#00A2C7" />
+                                <path
+                                    d="M17.5 7.82933C17.5 7.53552 17.1774 7.35583 16.9276 7.51048L11.1842 11.0659C10.4586 11.5151 9.54126 11.5151 8.81562 11.0659L3.07238 7.51058C2.82256 7.35593 2.5 7.53562 2.5 7.82943V13.917C2.5 15.1596 3.50736 16.167 4.75 16.167H15.25C16.4926 16.167 17.5 15.1596 17.5 13.917V7.82933Z"
+                                    fill="#00A2C7" />
+                            </svg>
+                            contact@PaydayeLoanWarehouse.com
+                        </p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M2.85156 7.58538C1.95518 5.78648 2.85962 3.80117 4.58306 2.76711C5.41282 2.26925 6.48522 2.48531 7.05746 3.26564L8.32702 4.99686C8.86738 5.73372 8.9502 6.71091 8.54156 7.52819L8.20868 8.19395C8.11232 8.38667 8.09708 8.60961 8.19566 8.80121C8.37524 9.15029 8.75767 9.7689 9.49438 10.5056C10.2311 11.2423 10.8497 11.6248 11.1988 11.8043C11.3904 11.9029 11.6133 11.8877 11.8061 11.7913L12.4718 11.4584C13.2891 11.0498 14.2663 11.1326 15.0031 11.673L16.7344 12.9425C17.5147 13.5148 17.7307 14.5872 17.2329 15.4169C16.1988 17.1404 14.2135 18.0448 12.4146 17.1484C10.8985 16.393 8.96113 15.1427 6.90923 13.0908C4.85733 11.0389 3.60703 9.10149 2.85156 7.58538Z"
+                                    fill="#00A2C7" />
+                            </svg>
+                            +1 800-275-8776
+                        </p>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M14.4492 5.75488C14.7076 6.38378 14.8496 7.07524 14.8496 7.80469C14.8496 8.83737 14.5611 9.79474 14.0713 10.6025L14.0361 10.6592C14.0306 10.6674 14.0251 10.6768 14.0186 10.6865C13.9796 10.7446 13.9234 10.8301 13.8516 10.9365C13.7079 11.1493 13.5043 11.4486 13.2656 11.7949C12.7879 12.488 12.1696 13.3679 11.6055 14.1172C10.6109 15.4372 10.3161 16.5724 10.2305 17.1318C10.2086 17.2664 10.1064 17.3496 10 17.3496C9.90681 17.3496 9.81687 17.286 9.78125 17.1797L9.76953 17.1318C9.68385 16.5724 9.38907 15.4372 8.39453 14.1172H8.39551C8.26791 13.946 8.13829 13.7692 8.00781 13.5898L11.6299 9.18066L11.6318 9.17871L11.6309 9.17773L14.4492 5.75488ZM7.91406 7.45508C7.89597 7.56897 7.88575 7.68567 7.88574 7.80469C7.88574 8.9963 8.82806 9.9668 10 9.9668C10.2431 9.9668 10.4761 9.92374 10.6934 9.84668L7.82617 13.3389C7.36221 12.6975 6.90307 12.0402 6.55273 11.5293C6.36342 11.2532 6.20533 11.0204 6.09473 10.8564C6.03944 10.7745 5.99642 10.7092 5.9668 10.665C5.96381 10.6606 5.96071 10.6564 5.95801 10.6523L5.92773 10.6025C5.83925 10.4575 5.76099 10.3098 5.69043 10.1592L7.91406 7.45508ZM8.30273 6.50977L5.55371 9.85352C5.29497 9.2246 5.15039 8.53334 5.15039 7.80469C5.15043 6.60249 5.53893 5.49562 6.18848 4.62207L8.30273 6.50977ZM11.6191 2.94824C12.7878 3.38486 13.7502 4.28712 14.3115 5.44824L12.085 8.15527C12.1031 8.04109 12.1143 7.92403 12.1143 7.80469C12.1142 6.61316 11.1719 5.64258 10 5.64258C9.75742 5.64258 9.5245 5.68495 9.30762 5.76172L11.6191 2.94824ZM10 2.65039C10.4567 2.65039 10.8982 2.71727 11.3154 2.84375L8.49316 6.27832L6.375 4.38672C7.26221 3.31984 8.55896 2.65039 10 2.65039Z"
+                                    fill="#00A2C7" stroke="#00A2C7" stroke-width="0.3" />
+                            </svg>
+                            2803 Philadelphia Pike, Suite B #1020,<br>Claymont, DE 19703, United States
+                        </p>
+                    </div>
+
+                    <div class="footer-right">
+                        <div class="footer-links">
+                            <a target="_blank" href="/privacy-policy.html">Privacy Policy</a>
+                            <a target="_blank" href="/terms-of-use.html">Term of Use</a>
+                            <a target="_blank" href="/credit-authorization.html">Credit Authorization</a>
+                            <a target="_blank" href="/contact-us.html">Contact us</a>
+                            <a target="_blank" href="/responsible-lending.html">Responsible Lending</a>
+                            <a target="_blank" href="/partners.html">Partners</a>
+                            <a target="_blank" href="/lending-goals.html">Lending Goals</a>
+                            <a target="_blank" href="/rates-and-fees.html">Rates and Fees</a>
+                            <a target="_blank" href="/do-not-sell-my-information.html">Do not sell my information</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-middle">
+                    <p>Payday eLoanWarehouse is not a lender and does not make credit decisions. We connect users with
+                        participating lenders offering loans from $100 to $5,000.</p>
+                    <p>Not all lenders operate in all states, and submitting a request does not guarantee approval. Loan
+                        terms depend on the lender and your eligibility.</p>
+                    <p>Credit checks may be performed.</p>
+                    <p>This service is void where prohibited. For serious financial concerns, please seek advice from a
+                        licensed professional.</p>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>Copyright © 2025 Payday eLoanWarehouse.com All Rights Reserved.</p>
+                </div>
+            </footer>
+
+
         </div>
     </div>
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
